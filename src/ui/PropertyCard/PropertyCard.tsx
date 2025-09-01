@@ -2,11 +2,12 @@ import './PropertyCard.css'
 import { type Property } from "../../model/types";
 // import { useNavigate } from 'react-router-dom'
 
-function PropertyCard({image, rating, title, type, location, details, host, price }: Property) {
+function PropertyCard({image, rating, title, type, location, details, host, price, id }: Property) {
     // const navigate = useNavigate()
 
     const handleCardClick = () => {
         // navigate(`/property/${id}`)
+        console.log(id)
     }
 
     return (
