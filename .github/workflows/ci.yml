@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,3 +16,5 @@ jobs:
           node-version: '22'
       - run: npm install
       - run: npm run test
+      - run: npx playwright install --with-deps
+      - run: npm run test:e2e
